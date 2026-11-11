@@ -40,7 +40,7 @@ class _SaludoPageState extends State<SaludoPage> { // Clase de estado que guarda
     if (nombre.isEmpty) { // Valida si el campo está vacío
       print('Validación fallida: El nombre está vacío'); // Imprime en consola que falló la validación
       setState(() { // Llama a setState para redibujar la pantalla
-        _resultado = 'Por favor, ingresa tu nombre'; // Muestra un mensaje de advertencia en la variable de estado
+        _resultado = 'Por favor, ingrese su nombre'; // Muestra un mensaje de advertencia en la variable de estado
       }); // Cierra el setState
       return; // Retorna para que no siga ejecutando el resto del código
     } // Cierra el if de validación
@@ -58,8 +58,8 @@ class _SaludoPageState extends State<SaludoPage> { // Clase de estado que guarda
       appBar: AppBar( // Barra superior de la app
         backgroundColor: Colors.blue, // Color de fondo de la barra superior
         centerTitle: true, // Centra el título en la barra superior
-        foregroundColor: Colors.yellow,
-        title: const Text('SaludoUAE',
+        foregroundColor: Colors.yellow, // color del texto
+        title: const Text('SaludoUAE', // Texto que se muestra en la barra superior
           style: TextStyle(fontFamily: 'serif', fontSize: 26, fontWeight: FontWeight.bold)), // Título que se muestra en la barra superior
       ), // Cierra el AppBar
       body: Padding( // Añade margen exterior a todo el contenido (equivale al margin de Android)
@@ -68,7 +68,7 @@ class _SaludoPageState extends State<SaludoPage> { // Clase de estado que guarda
           crossAxisAlignment: CrossAxisAlignment.stretch, // Estira los hijos para que ocupen todo el ancho
           children: [ // Lista de widgets hijos de la columna
             const Text( // Etiqueta superior
-              'Ingresa tu nombre', // Texto de la etiqueta
+              'Ingresa Tu Nombre', // Texto de la etiqueta
               style: TextStyle(fontFamily: 'serif',fontSize: 18), // Tamaño de la letra
             ), // Cierra el Text
             const SizedBox(height: 8), // Espacio vertical de separación (equivale al margin)
@@ -85,8 +85,8 @@ class _SaludoPageState extends State<SaludoPage> { // Clase de estado que guarda
                 backgroundColor: Colors.green, // Color de fondo del botón//
               ),
               onPressed: _saludar, // Asigna el método _saludar al evento de clic
-              child: const Text('Saludar',
-                style: TextStyle(fontFamily: 'serif', color: Colors.white ,fontSize: 18, fontWeight: FontWeight.bold),
+              child: const Text('Saludar',// Texto que muestra el botón
+                style: TextStyle(fontFamily: 'serif', color: Colors.white ,fontSize: 18, fontWeight: FontWeight.bold), // Estilo del texto (tamaño y negrita)
               ), // Texto que muestra el botón
             ), // Cierra el ElevatedButton
             const SizedBox(height: 16), // Espacio vertical de separación antes del resultado
@@ -99,6 +99,5 @@ class _SaludoPageState extends State<SaludoPage> { // Clase de estado que guarda
         ), // Cierra el Column
       ), // Cierra el Padding
     ); // Cierra el Scaffold
-  } // Cierra el método build
-
+  } // Cierra la clase _SaludoPageState
 } // Cierra la clase _SaludoPageState
