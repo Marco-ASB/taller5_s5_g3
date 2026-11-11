@@ -69,7 +69,7 @@ class _SaludoPageState extends State<SaludoPage> { // Clase de estado que guarda
           children: [ // Lista de widgets hijos de la columna
             const Text( // Etiqueta superior
               'Ingresa tu nombre', // Texto de la etiqueta
-              style: TextStyle(fontSize: 16), // Tamaño de la letra
+              style: TextStyle(fontFamily: 'serif',fontSize: 18), // Tamaño de la letra
             ), // Cierra el Text
             const SizedBox(height: 8), // Espacio vertical de separación (equivale al margin)
             TextField( // Campo de texto para ingresar el nombre
@@ -81,13 +81,18 @@ class _SaludoPageState extends State<SaludoPage> { // Clase de estado que guarda
             ), // Cierra el TextField
             const SizedBox(height: 16), // Espacio vertical de separación antes del botón
             ElevatedButton( // Botón elevado
+              style: ElevatedButton.styleFrom( // Estilo del botón
+                backgroundColor: Colors.green, // Color de fondo del botón//
+              ),
               onPressed: _saludar, // Asigna el método _saludar al evento de clic
-              child: const Text('Saludar'), // Texto que muestra el botón
+              child: const Text('Saludar',
+                style: TextStyle(fontFamily: 'serif', color: Colors.white ,fontSize: 18, fontWeight: FontWeight.bold),
+              ), // Texto que muestra el botón
             ), // Cierra el ElevatedButton
             const SizedBox(height: 16), // Espacio vertical de separación antes del resultado
             Text( // Texto que muestra el resultado en pantalla
               _resultado, // Muestra el valor actual de la variable de estado
-              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold), // Estilo del texto (tamaño y negrita)
+              style: const TextStyle(fontFamily:'serif',color: Colors.blueAccent,fontSize: 18, fontWeight: FontWeight.bold), // Estilo del texto (tamaño y negrita)
               textAlign: TextAlign.center, // Centra el texto en la pantalla
             ), // Cierra el Text de resultado
           ], // Cierra la lista de hijos
