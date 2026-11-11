@@ -56,7 +56,11 @@ class _SaludoPageState extends State<SaludoPage> { // Clase de estado que guarda
   Widget build(BuildContext context) { // Método que construye la interfaz de la pantalla
     return Scaffold( // Contenedor base que da estructura a la pantalla
       appBar: AppBar( // Barra superior de la app
-        title: const Text('SaludoUAE'), // Título que se muestra en la barra superior
+        backgroundColor: Colors.blue, // Color de fondo de la barra superior
+        centerTitle: true, // Centra el título en la barra superior
+        foregroundColor: Colors.yellow,
+        title: const Text('SaludoUAE',
+          style: TextStyle(fontFamily: 'serif', fontSize: 26, fontWeight: FontWeight.bold)), // Título que se muestra en la barra superior
       ), // Cierra el AppBar
       body: Padding( // Añade margen exterior a todo el contenido (equivale al margin de Android)
         padding: const EdgeInsets.all(16.0), // Margen de 16 píxeles en todos los lados
